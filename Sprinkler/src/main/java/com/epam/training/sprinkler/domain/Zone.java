@@ -7,15 +7,15 @@ public class Zone {
 	private double consumption;
 
 	public Zone() {
-    }
+	}
 
 	public Zone(int id, String name, double consumption) {
-        this.id = id;
-        this.name = name;
-        this.consumption = consumption;
-    }
+		this.id = id;
+		this.name = name;
+		this.consumption = consumption;
+	}
 
-    public int getId() {
+	public int getId() {
 		return id;
 	}
 
