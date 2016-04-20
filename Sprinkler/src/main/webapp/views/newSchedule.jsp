@@ -14,35 +14,34 @@
 <title>New schedule</title>
 </head>
 <body>
+	<%@include file="../../fragments/menu.jspf"%>
 	<div class="container">
 		<div class="page-header">
-		    <h1>New Scheduled Item</h1>      
-		  </div>
+			<h1>New Scheduled Item</h1>
+		</div>
 		<form class="form-inline" method="post" action="newSchedule">
 			<div class="form-group">
-				<label>From: </label> 
-				<input type="datetime" class="form-control" name="from" placeholder="yyyy-MM-dd hh:mm:ss"> 
+				<label>From: </label> <input type="datetime" class="form-control"
+					name="from" placeholder="yyyy-MM-dd hh:mm:ss">
 			</div>
 			<div class="form-group">
-				<label>To: </label> 
-				<input type="datetime" class="form-control" name="to" placeholder="yyyy-MM-dd hh:mm:ss"> 
+				<label>To: </label> <input type="datetime" class="form-control"
+					name="to" placeholder="yyyy-MM-dd hh:mm:ss">
 			</div>
-				<div class="form-group">
-				<label>Zone: </label> 	
-				<select name="zoneId" class="form-control" >
-					<c:forEach var="zone" items="${zones}" >
-						<option value="${zone.id}">
-							${zone.name}
-				        </option>
+			<div class="form-group">
+				<label>Zone: </label> <select name="zoneId" class="form-control">
+					<c:forEach var="zone" items="${zones}">
+						<option value="${zone.id}">${zone.name}</option>
 					</c:forEach>
-				</select> 
-			</div>	
-			<div class="checkbox">
-				<label><input type="checkbox" name="recurring"> Recurring </label>
+				</select>
 			</div>
-			<button type="submit" class="btn btn-default" >Save</button>
+			<div class="checkbox">
+				<label><input type="checkbox" name="recurring">
+					Recurring </label>
+			</div>
+			<button type="submit" class="btn btn-default">Save</button>
 		</form>
 	</div>
-	
+
 </body>
 </html>
