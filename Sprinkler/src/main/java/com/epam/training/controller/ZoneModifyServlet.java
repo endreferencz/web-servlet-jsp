@@ -49,20 +49,20 @@ public class ZoneModifyServlet extends HttpServlet {
 			String name = req.getParameter(NAME_PARAMETER);
 			double consumption = Double.parseDouble(req.getParameter(CONSUMPTION_PARAMETER));
 			Zone zone = new Zone(id, name, consumption);
-			updateZones(zone,oldId);
+			updateZones(zone, oldId);
 			res.sendRedirect(res.encodeURL(req.getContextPath() + "/admin/zone/list"));
 		} catch (NumberFormatException e) {
 			error = true;
-			res.sendRedirect(res.encodeURL(req.getContextPath() + "/admin/zone/modify?id="+oldId));
+			res.sendRedirect(res.encodeURL(req.getContextPath() + "/admin/zone/modify?id=" + oldId));
 		}
 	}
 
-	private void updateZones(Zone zone,int id) {
+	private void updateZones(Zone zone, int id) {
 		List<Zone> zones = getZones();
 		boolean found = false;
-		for(int i = 0;i<zones.size()&&!found;i++){
+		for (int i = 0; i < zones.size() && !found; i++) {
 			Zone current = zones.get(i);
-			if(current.getId()==id){
+			if (current.getId() == id) {
 				found = true;
 				current.setId(zone.getId());
 				current.setConsumption(zone.getConsumption());
