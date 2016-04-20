@@ -21,11 +21,7 @@
 </head>
 <body>
 
-
 <%@include file="../../fragments/menu.jspf" %>
-
-
-
     
 	<div class="panel panel-primary">
 		<div class="panel-heading">
