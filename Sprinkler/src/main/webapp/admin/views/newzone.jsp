@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<%@ taglib prefix="c" 
-           uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,7 +14,8 @@
 <title>Create new zone</title>
 </head>
 <body>
-		<form method="post" id="loginForm">
+	<%@include file="../../fragments/menu.jspf"%>
+	<form method="post" id="loginForm">
 		<div class="input-group">
 			<span class="input-group-addon" id="basic-addon1">ID</span> <input
 				type="text" class="form-control" placeholder="ID"
@@ -27,15 +27,14 @@
 				type="text" class="form-control" placeholder="Name"
 				aria-describedby="basic-addon2" name="zonename">
 		</div>
-		
+
 		<div class="input-group">
-			<span class="input-group-addon" id="basic-addon3">Consumption</span> <input
-				type="text" class="form-control" placeholder="Consumption"
+			<span class="input-group-addon" id="basic-addon3">Consumption</span>
+			<input type="text" class="form-control" placeholder="Consumption"
 				aria-describedby="basic-addon3" name="consumption">
 		</div>
-		
+
 		<input class="btn btn-default" type="submit" value="Add zone">
 		${error}
-
 </body>
 </html>
