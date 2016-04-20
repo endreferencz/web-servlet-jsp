@@ -6,7 +6,7 @@
 	max-width: 500px;
 }
 
-body {
+body.fancybackground {
 	background-image: url("bg.jpg");
 	background-repeat: no-repeat;
 }
