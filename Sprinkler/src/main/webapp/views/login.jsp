@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,12 +12,15 @@
 	<link href="${pageContext.servletContext.contextPath}/style/style.css" rel="stylesheet" type="text/css">
 <title>Login page</title>
 </head>
-<body class="fancybackground">
-	<c:if test="fail">
-		Invalid username or password!
-	</c:if>
-
+<body>
 	<form method="post" action="j_security_check" id="loginForm">
+		<h1>Please Log In</h1>
+		<c:if test="${param.fail}">
+			<div class="alert alert-danger">
+			  Invalid username or password!
+			</div>
+		</c:if>
+	
 		<div class="input-group">
 			<span class="input-group-addon" id="basic-addon1">Username</span> <input
 				type="text" class="form-control" placeholder="Username"
@@ -29,8 +32,9 @@
 				type="password" class="form-control" placeholder="Password"
 				aria-describedby="basic-addon2" name="j_password">
 		</div>
-		
-		<input class="btn btn-default" type="submit" value="Let's Sprinkle!">
+		<div style="text-align: left;">
+		<input class="btn btn-default" type="submit" style="width: 120px" value="Let's Sprinkle!">
+		</div>
 	</form>
 </body>
 </html>

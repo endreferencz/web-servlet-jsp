@@ -9,7 +9,7 @@
 <title>Schedule list</title>
 </head>
 <body>
-
+	<%@include file="../../fragments/menu.jspf"%>
 	<table border="1">
 		<tr>
 			<td>Item id</td>

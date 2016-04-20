@@ -11,14 +11,16 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
+<link href="${pageContext.servletContext.contextPath}/style/style.css" rel="stylesheet" type="text/css">
+
 <title>Admin index</title>
 </head>
 
-<%@include file="../../../fragments/menu.jspf" %>
 
 <body>
+	<%@include file="../../../fragments/menu.jspf"%>
 
-<div style="text-align: center; margin: 10px auto">
+	<div style="text-align: center; margin: 10px auto">
 <a href= "../newzone">
 <button type="button" class="btn btn-primary">New Zone</button>
 </a>
