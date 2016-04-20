@@ -8,13 +8,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/admin/logout")
-public class LogoutServlet extends HttpServlet {
+@WebServlet("")
+public class RootHandlerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        req.logout();
-        resp.sendRedirect(req.getContextPath() + "/admin/index");
+        resp.sendRedirect("admin/index");
     }
+
 }
