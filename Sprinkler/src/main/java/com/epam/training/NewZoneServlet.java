@@ -43,7 +43,7 @@ public class NewZoneServlet extends HttpServlet {
             double consumption = Double.parseDouble(request.getParameter(CONSUMPTION_PARAMETER));
             Zone zone = new Zone(id, name, consumption);
             updateZones(zone);
-            response.sendRedirect(response.encodeURL("index"));
+            response.sendRedirect(response.encodeURL("zone/list"));
         } catch (NumberFormatException e) {
             error = true;
             response.sendRedirect(response.encodeURL("newzone"));
