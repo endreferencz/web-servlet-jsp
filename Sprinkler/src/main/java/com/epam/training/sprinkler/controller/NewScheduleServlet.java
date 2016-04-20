@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.epam.training.sprinkler.domain.ScheduledItem;
 import com.epam.training.sprinkler.domain.Zone;
 
-@WebServlet("/newSchedule")
+@WebServlet("/admin/newSchedule")
 public class NewScheduleServlet extends HttpServlet {
 
 	private AtomicInteger idGenerator = new AtomicInteger(1);
