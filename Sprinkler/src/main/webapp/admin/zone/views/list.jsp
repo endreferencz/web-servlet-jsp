@@ -64,6 +64,7 @@
     	<td>${zone.name}</td>
     	<td>${zone.consumption}</td>
     	<td><a href="#"><button type="button" class="btn btn-danger" style="padding: 1px">Delete</button></a></td>
+    	<td><a href="/Sprinkler/admin/zone/modify?id=${zone.id}"><button type="button" class="btn btn-info" style="padding: 1px">Modify</button></a></td>
    	</tr>
 	</c:forEach>    
   </table>
