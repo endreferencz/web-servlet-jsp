@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet({"/login", "/loginFail"})
+@WebServlet({"/login"})
 public class LoginPageServlet extends HttpServlet {
     private static final String ADMIN_ROLE_NAME = "admin";
     private static final long serialVersionUID = 1L;
