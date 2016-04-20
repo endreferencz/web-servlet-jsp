@@ -14,11 +14,11 @@
 <title>Admin index</title>
 </head>
 
-<%@include file="../../../fragments/menu.jspf" %>
 
 <body>
+	<%@include file="../../../fragments/menu.jspf"%>
 
-<div style="text-align: center; margin: 10px auto">
+	<div style="text-align: center; margin: 10px auto">
 <a href= "../newzone">
 <button type="button" class="btn btn-primary">New Zone</button>
 </a>
