@@ -36,6 +36,9 @@
 	<security-role>
 		<role-name>admin</role-name>
 	</security-role>
+     <error-page>
+        <location>/admin/views/404.jsp</location>
+    </error-page>
   
         <listener>
               <listener-class>
