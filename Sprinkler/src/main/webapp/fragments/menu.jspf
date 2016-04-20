@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
       	<li><a href="#">Log</a></li>
-        <li><a href="#">Zones</a></li>
+        <li><a href="/Sprinkler/admin/zone/list">Zones</a></li>
         <li><a href="#">Settings</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
