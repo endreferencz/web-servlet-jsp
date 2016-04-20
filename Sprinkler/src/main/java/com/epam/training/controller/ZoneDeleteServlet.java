@@ -14,22 +14,21 @@ import com.epam.training.sprinkler.domain.Zone;
 @WebServlet("/admin/zone/delete")
 public class ZoneDeleteServlet extends HttpServlet {
 
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String strId = (String) req.getParameter("id");
-		List<Zone> zones = (List<Zone>) getServletContext().getAttribute("zones");
-		int id = Integer.parseInt(strId);
-		System.out.println(id);
-		if (zones != null) {
-			Zone zoneToDelete = null;
-			for (Zone zone : zones) {
-				if (zone.getId() == id) {
-					zoneToDelete = zone;
-				}
-			}
-			zones.remove(zoneToDelete);
-		}
-		resp.sendRedirect("/Sprinkler/admin/zone/list");
+    @Override
+    protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+        final String strId = req.getParameter("id");
+        final List<Zone> zones = (List<Zone>) getServletContext().getAttribute("zones");
+        final int id = Integer.parseInt(strId);
+        if (zones != null) {
+            Zone zoneToDelete = null;
+            for (final Zone zone : zones) {
+                if (zone.getId() == id) {
+                    zoneToDelete = zone;
+                }
+            }
+            zones.remove(zoneToDelete);
+        }
+        resp.sendRedirect("/Sprinkler/admin/zone/list");
 
-	}
+    }
 }
