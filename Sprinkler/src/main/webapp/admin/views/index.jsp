@@ -17,6 +17,8 @@
 	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
 	crossorigin="anonymous">
 
+<link href="${pageContext.servletContext.contextPath}/style/style.css" rel="stylesheet" type="text/css">
+
 <title>Admin index</title>
 </head>
 <body>
