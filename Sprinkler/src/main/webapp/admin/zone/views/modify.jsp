@@ -5,26 +5,34 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>Modify zone</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
 </head>
 <body>
 	<%@include file="../../../fragments/menu.jspf"%>
-	<c:set value="${zone}" var="zone">
-	<form>
+	<c:set var="zone" value="${zoneToModify}" />
+	<c:out value="${error}"></c:out>
+	<form action="modify" method="post">
 		<div class="form-group">
 			<label for="id">Id</label> <input type="text" class="form-control"
-				id="id" placeholder="${zone.id}">
+				name="id" id="id" value="${zone.id}">
 		</div>
 		<div class="form-group">
 			<label for="zonename">Name</label> <input type="text"
-				class="form-control" id="zonename" placeholder="${zone.name}">
+				class="form-control" name="zonename" id="zonename" value="${zone.name}">
 		</div>
 		<div class="form-group">
 			<label for="consumption">Consumption</label> <input type="text"
-				id="consumption" placeholder="${zone.consumption}">
+				name="consumption" id="consumption" value="${zone.consumption}">
 		</div>
 		<button type="submit" class="btn btn-default">Submit</button>
 	</form>
-	</c:set>
 </body>
 </html>
