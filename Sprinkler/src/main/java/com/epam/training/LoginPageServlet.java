@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet({"/login", "/loginFail"})
 public class LoginPageServlet extends HttpServlet {
+    private static final String ADMIN_ROLE_NAME = "admin";
     private static final long serialVersionUID = 1L;
 
     public LoginPageServlet() {
@@ -18,7 +19,11 @@ public class LoginPageServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("views/login.jsp").forward(request, response);
+        if (request.isUserInRole(ADMIN_ROLE_NAME)) {
+            response.sendRedirect(request.getContextPath() + "/admin/index");
+        } else {
+            request.getRequestDispatcher("views/login.jsp").forward(request, response);
+        }
     }
 
     @Override
