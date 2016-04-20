@@ -15,7 +15,7 @@
 <title>Create new zone</title>
 </head>
 <body>
-		<form method="post" action="j_security_check" id="loginForm">
+		<form method="post" id="loginForm">
 		<div class="input-group">
 			<span class="input-group-addon" id="basic-addon1">ID</span> <input
 				type="text" class="form-control" placeholder="ID"
