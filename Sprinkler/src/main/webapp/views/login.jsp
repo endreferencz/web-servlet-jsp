@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +15,7 @@
 <body>
 	<form method="post" action="j_security_check" id="loginForm">
 		<h1>Please Log In</h1>
-		<br>
-		<c:if test="fail">
+		<c:if test="${param.fail}">
 			<div class="alert alert-danger">
 			  Invalid username or password!
 			</div>
