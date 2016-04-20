@@ -44,7 +44,9 @@
 <body>
 
 <div style="text-align: center; margin: 10px auto">
+<a href= "../newzone">
 <button type="button" class="btn btn-primary">New Zone</button>
+</a>
 </div>
 
 <div class="panel panel-default" style="max-width: 90%; margin: 0 auto">
